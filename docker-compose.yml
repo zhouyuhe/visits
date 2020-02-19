@@ -1,0 +1,11 @@
+version: '3'
+## services: container
+## 4001 is the local host, 8081 is the container host run in docker
+services: 
+    redis-server:
+        image: 'redis'
+    node-app:
+        restart: 'no'
+        build: .
+        ports: 
+            - "4001:8081"
